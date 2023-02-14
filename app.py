@@ -72,9 +72,9 @@ def get_image_category(data:data2):
     ss = StandardScaler()
     bees_stand = ss.fit_transform(ok)
     gum_pca = ss.fit_transform(bees_stand)
-    loaded_model = pickle.load(open("finalized_model.pkl", 'rb'))
-    predict=loaded_model.predict(gum_pca)
-    return {'transformed': str(predict[0])}
+    #loaded_model = pickle.load(open("finalized_model.pkl", 'rb'))
+    #predict=loaded_model.predict(gum_pca)
+    return {'transformed': gum_pca.tolist()}
 
 
 

@@ -35,3 +35,5 @@ def get_image_category(data:data2):
     predict=loaded_model.predict(gum_pca)
     return {'transformed': str(predict[0])}
 
+if __name__ == '__main__':
+    uvicorn.run(app, host='127.0.0.1', port=4000, debug=True)

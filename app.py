@@ -10,10 +10,7 @@ class data2(BaseModel):
     image: list
 
 app = FastAPI()
-img =cv2.imread('res.jpg')
 
-img2=img.flatten()
-ok=img2.reshape(1, -1)
 
 @app.get('/')
 def index():
